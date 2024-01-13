@@ -1,0 +1,70 @@
+#Q3 
+#1. Input 4 real numbers a, b, c and x.
+import math
+try:
+    a = float(input('Nhap so a:'))
+    b = float(input('Nhap so b:'))
+    c = float(input('Nhap so c:'))
+    x = float(input('Nhap so x:'))
+except:
+    print('Xin hay nhap so thuc')
+
+#2. Calculate S1 = ax 2 + bx + c.
+
+s1 = a * (x**2) + b * x + c
+print('s1 =', s1)
+
+#3. Calculate S2 = acb42 if b 2 - 4ac &gt; 0, otherwise S2 = 0
+s2 = 0
+s = b**2 -4 * a * c
+if s > 0:
+    s2 = math.sqrt(s1)
+else:
+    s2 = 0
+print('s2 = ', s2)
+#4. Re-input a, b and c. Check whether a, b and c are sides of a triangle or not.
+#5. If a, b, c are sides of a triangle, then calculate its perimeter and area, otherwise display on thescreen a message &quot;a, b, c are not side of a triangle&quot;. The area is calculated by the Heron formula below:
+try:
+    a = float(input('Nhap so a:'))
+    b = float(input('Nhap so b:'))
+    c = float(input('Nhap so c:'))
+except:
+    print('Xin hay nhap so thuc')
+    
+if a + b > c and a + c > b and b + c > a :
+    print('a, b, c are sides of a triangle')
+    perimeter = a + b + c
+    p = ( a + b + c) / 2
+    area = math.sqrt(p * ( p - a) * (p - b) * (p - c))
+    print('perimeter = ', perimeter)
+    print('area =', area)
+else:
+    print('a, b, c are not side of a triangle')
+    
+
+#Q4
+#1. Display the maximum and minimum values among them.
+try:
+    a = float(input('Nhap so a:'))
+    b = float(input('Nhap so b:'))
+    c = float(input('Nhap so c:'))
+except:
+    print('Xin hay nhap so thuc')
+
+def max_min_numbers(a, b, c):
+    max_num = max(a, b, c)
+    min_num = min(a, b, c)
+    return max_num, min_num
+
+max_number, min_number = max_min_numbers(a, b, c)
+print(f"The maximum number is {max_number}")
+print(f"The minimum number is {min_number}")
+
+#2 Arrange them in ascending order
+def sort_numbers(a, b, c):
+    sorted_numbers = sorted([a, b, c])
+    return sorted_numbers
+
+sorted_numbers = sort_numbers(a, b, c)
+print(f"The ascending order are {sorted_numbers}")
+
