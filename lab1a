@@ -1,0 +1,38 @@
+#Q3
+#1.Calculate the multiplication and sum of two numbers
+number1 = 20
+number2 = 30
+
+a = number1 * number2
+
+print('The result is:' , a)
+
+number1 = 30
+number2 = 40
+
+b = number1 + number2
+print('The result is:' , b)
+
+#2. Print the sum of the current number and the previous number
+previous_number = 0
+current_number = 1
+i = 0
+
+while i < 10:
+    sum_numbers = previous_number + current_number
+    print(f"The sum of {previous_number} and {current_number} is: {sum_numbers}")
+    previous_number = current_number
+    current_number += 1
+    i += 1
+
+#3. Display three string “Name”, “Is”, “James” as “Name**Is**James”
+print("Name" + "**" + "Is" + "**" + "James")
+
+#Q4
+#1. Convert Decimal number to octal using print() output formatting
+#2. 2. Display float number with 2 decimal places using print()
+number = 458.54135
+print("The float number with 2 decimal places is: {:.2f}".format(number))
+
+    
+
